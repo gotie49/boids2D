@@ -1,0 +1,54 @@
+{
+    "name": "Player Controls",
+    "maps": [
+        {
+            "name": "Movement",
+            "id": "396a7798-f49e-4a20-a7d3-6023a48c82a3",
+            "actions": [
+                {
+                    "name": "Move",
+                    "type": "Value",
+                    "id": "67f12d0e-a5c0-4797-9f9a-165b7e93b0eb",
+                    "expectedControlType": "Vector2",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": true
+                },
+                {
+                    "name": "Boost",
+                    "type": "Button",
+                    "id": "5edb27cb-562d-4a62-bb72-9610694f51b7",
+                    "expectedControlType": "Button",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": false
+                }
+            ],
+            "bindings": [
+                {
+                    "name": "",
+                    "id": "027dfa28-893c-4c89-9526-939567999999",
+                    "path": "<Gamepad>/leftStick",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Move",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "b044a065-c28d-478e-b2bd-4b2a3ab06e0e",
+                    "path": "<Gamepad>/rightShoulder",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Boost",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                }
+            ]
+        }
+    ],
+    "controlSchemes": []
+}
