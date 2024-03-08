@@ -21,7 +21,7 @@ public class Flock : MonoBehaviour
     public float neighborRadius = 1.5f;
     [Range(0f, 1f)]
     public float avoidanceRadiusMultiplier = 0.5f;
-    public Vector2 spawnOffset;
+    public float spawnRadius;
     float squareMaxSpeed;
     float squareNeighborRadius;
     float squareAvoidanceRadius;
@@ -36,6 +36,7 @@ public class Flock : MonoBehaviour
         squareNeighborRadius = neighborRadius * neighborRadius;
         squareAvoidanceRadius = squareNeighborRadius *avoidanceRadiusMultiplier*avoidanceRadiusMultiplier;
 
+        Vector2 spawnOffset = Random.insideUnitCircle*spawnRadius;
         for(int i = 0; i < startingCount; i++)
         { 
             FlockAgent newAgent = Instantiate

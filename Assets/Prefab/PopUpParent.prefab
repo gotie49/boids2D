@@ -100,7 +100,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: + 30s
+  m_text: + 10s
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 29b95d7f302cf8e4c971f769d44ec7df, type: 2}
   m_sharedMaterial: {fileID: -6239358768113128739, guid: 29b95d7f302cf8e4c971f769d44ec7df, type: 2}
@@ -109,7 +109,7 @@ MonoBehaviour:
   m_fontMaterials: []
   m_fontColor32:
     serializedVersion: 2
-    rgba: 1124073471
+    rgba: 4294967295
   m_fontColor: {r: 1, g: 1, b: 1, a: 1}
   m_enableVertexGradient: 0
   m_colorMode: 3
@@ -316,6 +316,10 @@ PrefabInstance:
     - target: {fileID: 3088925891112255612, guid: 312d72c0c1500a6458bd2daecb49287c, type: 3}
       propertyPath: m_Name
       value: PopUpText
+      objectReference: {fileID: 0}
+    - target: {fileID: 3587708101638368988, guid: 312d72c0c1500a6458bd2daecb49287c, type: 3}
+      propertyPath: m_text
+      value: + 10s
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []

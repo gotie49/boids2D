@@ -46,9 +46,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   agentPrefab: {fileID: 1979286225910485257, guid: 38574360a2512b84794bb41cad7c8f64, type: 3}
   behavior: {fileID: 11400000, guid: 56986303304210d4887ac07ea72d347d, type: 2}
-  startingCount: 100
+  startingCount: 30
   driveFactor: 10
   maxSpeed: 5
-  neighborRadius: 2
+  neighborRadius: 1
   avoidanceRadiusMultiplier: 0.5
-  spawnOffset: {x: 30, y: 1}
+  spawnRadius: 20

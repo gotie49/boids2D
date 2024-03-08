@@ -7,11 +7,12 @@ using UnityEngine.UI;
 using UnityEngine.UIElements;
 public class ObstacleMove : MonoBehaviour
 {
+    public AudioManager audioManager;
     public InputActionAsset movement;
     private InputAction move;
     private InputAction boost;
     [Range(1f, 10f)]
-    public float moveSpeed = 2;
+    public float moveSpeed = 3;
 
     public int killCount = 0;
     [Range(0f,100f)]
@@ -32,8 +33,8 @@ public class ObstacleMove : MonoBehaviour
         float boostActive = boost.ReadValue<float>();      
         if(boostActive == 1 && boostPower>0)
         {
-            transform.Translate(2f*m.normalized* Time.deltaTime*moveSpeed);
-            boostPower-=15*Time.deltaTime;
+            transform.Translate(3f*m.normalized* Time.deltaTime*moveSpeed);
+            boostPower-=10*Time.deltaTime;
             
         }
         else
@@ -77,14 +78,16 @@ public class ObstacleMove : MonoBehaviour
         if(collider.GetComponent<FlockAgent>())
         {         
             Destroy(collider.gameObject);
+            audioManager.PlaySFX(audioManager.death);
             killCount++;
         }
         else if(collider.GetComponent<BoostObstacle>())
         {
            Destroy(collider.gameObject);
-           if(boostPower+10<100)
+           audioManager.PlaySFX(audioManager.boostPickup);
+           if(boostPower<34)
            {
-                boostPower+=10;    
+                boostPower+=66;    
            }
            else
            {
